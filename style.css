@@ -80,15 +80,16 @@ html {
 }
 
 .main__title {
-    text-align: center;
-    font-family: "Montserrat";
-    font-weight: 400;
-    font-size: 2rem;
-    background-color: var(--color6);
+    margin: 0 0 3rem 0;
     padding: 2rem 0;
     color: var(--color5);
     display: flex;
     justify-content: center;
+    font-size: 2rem;
+    background-color: var(--color6);
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 400;
     position: relative;
 }
 
@@ -97,7 +98,7 @@ html {
     font-family: "Alegreya Sans";
     box-sizing: border-box;
     padding: 0 3rem;
-    margin: 3rem 0;
+    margin: 0 0 3rem 0;
     text-align: justify;
 }
 
@@ -106,4 +107,10 @@ html {
     width: 100vw;
     height: 10rem;
     background-color: var(--color6);
+}
+
+@media (max-width: 650px) {
+    .main__section {
+        padding: 1rem;
+    }
 }
