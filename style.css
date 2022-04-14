@@ -111,6 +111,6 @@ html {
 
 @media (max-width: 650px) {
     .main__section {
-        padding: 1rem;
+        padding: 0 1rem;
     }
 }
