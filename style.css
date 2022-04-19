@@ -9,19 +9,20 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--color6);
 }
 
 .body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #fff;
 }
 
 
 /*------------HEADER------------*/
 .header {
     width: 100%;
-    height: 4rem;
     background-color: var(--color1);
     position: fixed;
     display: flex;
@@ -30,20 +31,23 @@ html {
     font-size: .9rem;
     color: #fff;
     z-index: 10;
+    justify-content: space-between;
 }
 
 .header__logo {
     height: 3rem;
-    margin-left: 2rem;
+    margin: .5rem 2rem;
 }
 
 .header__list {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .header__item {
-    margin-right: 2rem;
+    margin-inline-end: 2rem;
 }
 
 .header__link {
@@ -68,10 +72,8 @@ html {
     width: 100%;
 }
 
-
 /*------------MAIN------------*/
 .main {
-    margin-top: 4rem;
     width: 60rem;
     min-height: 100vh;
     background-color: white;
@@ -80,7 +82,7 @@ html {
 }
 
 .main__title {
-    margin: 0 0 3rem 0;
+    margin: 4rem 0 3rem;
     padding: 2rem 0;
     color: var(--color5);
     display: flex;
@@ -105,12 +107,36 @@ html {
 /*------------FOOTER------------*/
 .footer {
     width: 100vw;
-    height: 10rem;
+    height: min(30vh, 10rem);
     background-color: var(--color6);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 6rem;
 }
 
-@media (max-width: 650px) {
-    .main__section {
+.footer__creditos {
+    color: var(--color5);
+    font-family: "Alegreya Sans";
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .main__section, .footer {
         padding: 0 1rem;
+    }
+
+    .header__list {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+        background: var(--color6);
+    }
+
+    .header__item {
+        line-height: 3rem;
     }
 }
