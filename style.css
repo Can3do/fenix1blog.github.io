@@ -121,19 +121,26 @@ html {
     align-items: center;
     justify-content: flex-end;
     padding: 0 6rem;
+    box-sizing: border-box;
 }
 
 .footer__creditos {
     color: var(--color5);
     font-family: "Alegreya Sans";
-    font-size: 1.2rem;
     line-height: 2rem;
     margin: 0;
 }
 
 @media (max-width: 1200px) {
-    .main__section, .main__header, .footer{
+    .footer {
         padding: 0 1rem;
+    }
+    .main {
+        padding: 7rem 1rem 0;
+    }
+
+    .header__logo {
+        margin: .5rem 1rem;
     }
 
     .header__list {
@@ -142,6 +149,7 @@ html {
         flex-direction: column;
         padding: min(20vh, 10rem) 2rem;
         background: var(--color6);
+        transform: translateX(100%);
     }
 
     .header__item {
